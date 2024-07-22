@@ -30,22 +30,3 @@ public class DataController {
     }
 }
 
-
-/*
-@RestController
-@Tag(name = "Data API", description = "API for managing data")
-public class DataController {
-
-    @GetMapping("/getData")
-    @Operation(summary = "Get data by parameter", description = "Returns data for  the given parameter")
-    @ApiResponses(value={
-            @ApiResponse(responseCode = "200", description = "Successful retrieval of data"),
-            @ApiResponse(responseCode = "400", description = "Invalid param"),
-            @ApiResponse(responseCode = "500", description = "Internal server error")
-    })
-    public String getData(@RequestParam @Parameter(description = "parameter to get data for") String param) {
-        return "Data for "+param;
-    }
-}
-*/
-
