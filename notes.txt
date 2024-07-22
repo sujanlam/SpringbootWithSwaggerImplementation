@@ -4,7 +4,7 @@
 For globally (all controllers)
 ====================================
 @SecurityScheme(
-        name = "authBearer",
+        name = "auth",
         in = SecuritySchemeIn.HEADER,
         type = SecuritySchemeType.HTTP,
         bearerFormat = "JWT",
@@ -18,7 +18,7 @@ For one controller:
 On the controller:
 ------------------------------
 @RestController
-@SecurityRequirement(name = "auth")
+@SecurityRequirement(name = "auth") //This should match the one of config file (@SecurityScheme( name = "auth"in OpenAPIConfig class)
 @Tag(name = "My API", description = "API for managing data")
 public class DataController {
 
